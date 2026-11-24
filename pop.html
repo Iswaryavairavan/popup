@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>POPUP Page</title>
+</head>
+
+<body>
+    <center>
+        <h1 id="one">WELCOME</h1>
+        <p id="two">
+            Click the button to open the popup page
+        </p>
+        <button id="three" onclick="pop()">Click Me!</button>
+       
+    </center>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: rgb(244, 204, 212);
+    }
+
+    h1 {
+        color: red;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    #three {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+<script>
+    var first = document.getElementById("one")
+    var second = document.getElementById("two")
+    var third = document.getElementById("three")
+    var closepop=document.getElementById("close")
+    function pop() {
+        if (third.textContent == "Click Me!") {
+           
+            alert(textContent = "popup screen")
+            
+
+
+        }
+        else {
+            first.textContent = "WELCOME"
+            second.textContent = "Click the button to open the popup page"
+            third.textContent = "Click Me!"
+            closepop.style.display="block";
+        }
+    }
+</script>
