@@ -12,18 +12,37 @@
             Click the button to open the popup page
         </p>
         <button id="three" onclick="pop()">Click Me!</button>
-       
+       <br><br>
+    </center>
+    <center>
+    <div id="popup">
+        <h1>Enter your details</h1>
+        Name: <input type="text" id="name" placeholder="Enter your name">
+        <br><br>
+        Date of Birth: <input type="date" id="dob" >
+        <br><br>
+        Gender:
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+        Mobile number:<input type="number" id="mobile" placeholder="Enter your mobile number">
+        <br><br>
+        Email id:<input type="email" id="email" placeholder="Enter your email id">
+        <br><br>
+        <button onclick="submitform()">Submit</button>
+    </div>
+    <div id="details"></div>
     </center>
 </body>
 
 </html>
 <style>
     body {
-        background-color: rgb(244, 204, 212);
+        background-color: rgb(212, 187, 244);
     }
 
     h1 {
-        color: red;
+        color: rgb(206, 89, 16);
     }
 
     p {
@@ -35,6 +54,14 @@
         color: white;
         cursor: pointer;
     }
+   #popup{
+    display:none;
+    background-color: rgb(176, 139, 198);
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+    }
+   
 </style>
 <script>
     var first = document.getElementById("one")
@@ -42,18 +69,22 @@
     var third = document.getElementById("three")
     var closepop=document.getElementById("close")
     function pop() {
-        if (third.textContent == "Click Me!") {
-           
-            alert(textContent = "popup screen")
-            
-
-
-        }
-        else {
-            first.textContent = "WELCOME"
-            second.textContent = "Click the button to open the popup page"
-            third.textContent = "Click Me!"
-            closepop.style.display="block";
-        }
+        document.getElementById("popup").style.display = "block";
     }
+        function submitform(){
+            var name = document.getElementById("name").value
+    var date = document.getElementById("dob").value
+   var gender = document.querySelector('input[name="gender"]:checked').value;
+    var mobile=document.getElementById("mobile").value
+    var email=document.getElementById("email").value
+    document.getElementById("details").innerHTML=
+        "Name: " + name + "<br>" +
+        "Date of Birth: " + date + "<br>" +
+        "Gender: " + gender + "<br>" +
+        "Mobile Number: " + mobile + "<br>" +
+        "Email: " + email;
+     document.getElementById("popup").style.display = "none";
+        }
+    
+
 </script>
