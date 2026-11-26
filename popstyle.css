@@ -1,0 +1,25 @@
+    body {
+        background-color: rgb(212, 187, 244);
+    }
+
+    h1 {
+        color: rgb(206, 89, 16);
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    #three {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+    }
+
+    #popup {
+        display: none;
+        background-color: rgb(176, 139, 198);
+        padding: 20px;
+        width: 500px;
+        margin: 20px auto;
+    }
