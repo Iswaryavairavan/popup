@@ -18,7 +18,19 @@
 
     #popup {
         background-color: rgb(176, 139, 198);
-        padding: 20px;
-        width: 500px;
-        margin: 20px auto;
+       height: 750px;
     }
+    table {
+    border-collapse: collapse;
+    margin: 20px ;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(176, 139, 198);
+}
